@@ -1,14 +1,15 @@
 name: enviroment_service
-description: A starting point for Dart libraries or applications.
-# version: 1.0.0
+description: A simple service to store the active app enviroment
+version: 0.1.0
 # homepage: https://www.example.com
 # author: Bruno Bellissimo <email@example.com>
 
 environment:
   sdk: '>=2.0.0 <3.0.0'
 
-#dependencies:
+dependencies:
 #  path: ^1.4.1
+  rxdart: ^0.19.0
 
 dev_dependencies:
   test: ^1.0.0
