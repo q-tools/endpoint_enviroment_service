@@ -5,16 +5,17 @@ import 'package:rxdart/rxdart.dart';
 enum EnvironmentType { production, test, development }
 
 class EnvironmentService {
-  final onDataChange =
+  final BehaviorSubject _onDataChange =
       new BehaviorSubject<EnvironmentType>(seedValue: EnvironmentType.test);
+  Observable get enviromentUpdateStream => _onDataChange;
+
   EnvironmentType _activeEnviroment = EnvironmentType.test;
+  EnvironmentType get activeEnviroment => _activeEnviroment;
 
   EnvironmentService();
 
-  EnvironmentType get activeEnviroment => _activeEnviroment;
-
   void setActiveEnviroment(EnvironmentType env) {
     this._activeEnviroment = env;
-    onDataChange.add(env);
+    _onDataChange.add(env);
   }
 }
