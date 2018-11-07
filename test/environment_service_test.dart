@@ -1,4 +1,4 @@
-import 'package:enviroment_service/enviroment_service.dart';
+import 'package:environment_service/environment_service.dart';
 import 'package:test/test.dart';
 
 void main() {

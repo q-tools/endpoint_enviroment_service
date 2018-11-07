@@ -1,5 +1,5 @@
-name: enviroment_service
-description: A simple service to store the active app enviroment
+name: environment_service
+description: A simple service to store the active app environment
 version: 0.1.0
 # homepage: https://www.example.com
 # author: Bruno Bellissimo <email@example.com>
