@@ -1,9 +1,8 @@
-// EnvironmentService handles the environment a Dart app runs within.
-import 'dart:async';
 import 'package:rxdart/rxdart.dart';
 
 enum EnvironmentType { production, test, development }
 
+// EnvironmentService handles the environment a Dart app runs within.
 class EnvironmentService {
   final BehaviorSubject _onDataChange =
       new BehaviorSubject<EnvironmentType>(seedValue: EnvironmentType.test);
