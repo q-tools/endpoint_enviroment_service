@@ -7,15 +7,17 @@ enum EnvironmentType { production, test, development }
 class EnvironmentService {
   final BehaviorSubject _onDataChange =
       new BehaviorSubject<EnvironmentType>(seedValue: EnvironmentType.test);
-  Observable get enviromentUpdateStream => _onDataChange;
 
-  EnvironmentType _activeEnviroment = EnvironmentType.test;
-  EnvironmentType get activeEnviroment => _activeEnviroment;
+  Observable get environmentUpdateStream => _onDataChange;
+
+  EnvironmentType _activeEnvironment = EnvironmentType.test;
+
+  EnvironmentType get activeEnvironment => _activeEnvironment;
 
   EnvironmentService();
 
-  void setActiveEnviroment(EnvironmentType env) {
-    this._activeEnviroment = env;
+  void setActiveEnvironment(EnvironmentType env) {
+    this._activeEnvironment = env;
     _onDataChange.add(env);
   }
 }
